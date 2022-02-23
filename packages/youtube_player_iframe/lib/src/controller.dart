@@ -84,7 +84,7 @@ class YoutubePlayerController {
   /// Closes [YoutubePlayerController].
   ///
   /// Call when the controller is no longer used.
-  Future<void> close() => _controller.close();
+  Future<void> close() async => _controller.close();
 
   /// Plays the currently cued/loaded video.
   ///

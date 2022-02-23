@@ -142,6 +142,7 @@ class _MobileYoutubePlayerState extends State<RawYoutubePlayer>
   @override
   void dispose() {
     WidgetsBinding.instance?.removeObserver(this);
+    controller.close();
     super.dispose();
   }
 
