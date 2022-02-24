@@ -3,8 +3,6 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/scheduler.dart';
 
 import '../enums/thumbnail_quality.dart';
 import '../utils/errors.dart';
@@ -208,7 +206,7 @@ class _YoutubePlayerState extends State<YoutubePlayer> {
     widget.controller.addListener(listener);
   }
 
-  void listener() async {
+  void listener() {
     if (controller.value.isReady && _initialLoad) {
       _initialLoad = false;
       if (controller.flags.autoPlay) controller.play();

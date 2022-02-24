@@ -8,17 +8,12 @@ import 'dart:developer';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:youtube_player_iframe/src/enums/youtube_error.dart';
+import 'package:url_launcher/url_launcher.dart' as url_launcher;
+
 import 'package:youtube_player_iframe/src/helpers/player_fragments.dart';
 import 'package:youtube_player_iframe/src/player_value.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
-import 'package:url_launcher/url_launcher.dart' as url_launcher;
-
-import '../controller.dart';
-import '../enums/player_state.dart';
-import '../meta_data.dart';
 
 /// A youtube player widget which interacts with the underlying webview inorder to play YouTube videos.
 ///

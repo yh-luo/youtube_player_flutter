@@ -168,7 +168,7 @@ class YoutubePlayerController extends ValueNotifier<YoutubePlayerValue> {
         ?.controller;
   }
 
-  _callMethod(String methodString) {
+  void _callMethod(String methodString) {
     if (value.isReady) {
       value.webViewController?.evaluateJavascript(source: methodString);
     } else {
@@ -176,8 +176,8 @@ class YoutubePlayerController extends ValueNotifier<YoutubePlayerValue> {
     }
   }
 
-  // ignore: use_setters_to_change_properties
   /// Updates the old [YoutubePlayerValue] with new one provided.
+  /// ignore: use_setters_to_change_properties
   void updateValue(YoutubePlayerValue newValue) => value = newValue;
 
   /// Plays the video.
